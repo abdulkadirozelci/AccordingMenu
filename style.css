@@ -1,0 +1,134 @@
+*
+{
+    margin:0;
+    padding: 0;
+    font-family: 'Barlow';
+    list-style: none;
+    text-decoration: none;
+}
+body
+{
+    background:#ededed;
+
+}
+.wrapper
+{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.mainMenu
+{
+    width: 250px;
+    display: block;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.item
+{
+    border-top: 1px solid #45818E;
+    overflow: hidden;
+}
+.btn
+{
+    display: block;
+    padding: 15px 20px;
+    background: #45818E;
+    color: #fff;
+    position: relative;
+}
+
+.btn:before
+{
+    content:'';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top:10px solid #45818E;
+    right: 15px;
+    bottom: -10px;
+    z-index: 9;
+}
+.btn i 
+{
+    margin-right: 10px;
+}
+.subMenu
+{
+    background: #76A5AF;
+    overflow: hidden;
+    transition: max-height 0.7s;
+    max-height: 0;
+}
+.subMenu a 
+{
+    display: block;
+    padding: 15px 20px;
+    color: #fff;
+    font-size: 14px;
+    border-bottom: 1px solid #76A5AF;
+    position: relative;
+}
+.subMenu a:before
+{
+    content: '';
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.subMenu a:hover:before 
+{
+    content: '';
+    position: absolute;
+    height: 0;
+    width: 6px;
+    left:0;
+    top:0;
+    opacity: 1;
+    border-top:24px solid transparent;
+    border-left:11px solid #ededed;
+    border-bottom: 24px solid transparent;
+}
+.subMenu a:after 
+{
+    content: '';
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.subMenu a:hover:after 
+{
+    content: '';
+    position: absolute;
+    height: 0;
+    width: 6px;
+    right: 0px;
+    top:0;
+    opacity: 1;
+    border-top: 24px solid transparent;
+    border-right: 11px solid #ededed;
+    border-bottom: 24px solid transparent;
+
+}
+
+.subMenu a:hover 
+{
+    background:#76A5AF;
+    background: linear-gradient(to bottom, #76A5AF 0%, #76A5AF 50%, #91B7BF 51%, #91B7BF 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#76A5AF',endColorstr='#91B7BF',GradientType=0);
+    transition: all 0.3s;
+    border-bottom: 1px solid #394c7f;
+}
+
+.subMenu a:last-child
+{
+    border:none;
+}
+.item:target .subMenu
+{
+    max-height: 10em;
+}
+    
+
+
